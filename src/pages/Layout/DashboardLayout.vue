@@ -11,9 +11,24 @@
         <md-icon>dashboard</md-icon>
         <p>Dashboard</p>
       </sidebar-link>
-      <sidebar-link to="/dashboard">
-        <md-icon>content_paste</md-icon>
+      <sidebar-link to="/berita">
+        <md-icon>auto_stories</md-icon>
         <p>Berita</p>
+      </sidebar-link>
+
+      <sidebar-link to="/testimoni">
+        <md-icon>tips_and_updates</md-icon>
+        <p>Testimoni</p>
+      </sidebar-link>
+
+      <sidebar-link to="/tiket">
+        <md-icon>airplane_ticket</md-icon>
+        <p>Tiket</p>
+      </sidebar-link>
+
+      <sidebar-link to="/history">
+        <md-icon>history</md-icon>
+        <p>History</p>
       </sidebar-link>
     </side-bar>
 
@@ -34,23 +49,23 @@
 </template>
 
 <script>
-import TopNavbar from "./TopNavbar.vue";
-import ContentFooter from "./ContentFooter.vue";
-import DashboardContent from "./Content.vue";
-import MobileMenu from "@/pages/Layout/MobileMenu.vue";
+  import TopNavbar from "./TopNavbar.vue";
+  import ContentFooter from "./ContentFooter.vue";
+  import DashboardContent from "./Content.vue";
+  import MobileMenu from "@/pages/Layout/MobileMenu.vue";
 
-export default {
-  components: {
-    TopNavbar,
-    DashboardContent,
-    ContentFooter,
-    MobileMenu,
-  },
-  data() {
-    return {
-      sidebarBackground: "green",
-      sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
-    };
-  },
-};
+  export default {
+    components: {
+      TopNavbar,
+      DashboardContent,
+      ContentFooter,
+      MobileMenu,
+    },
+    data() {
+      return {
+        sidebarBackground: "green",
+        sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
+      };
+    },
+  };
 </script>

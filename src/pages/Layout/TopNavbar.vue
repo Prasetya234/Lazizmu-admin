@@ -17,19 +17,19 @@
 
         <div class="md-collapse">
           <div class="md-autocomplete">
-            <md-autocomplete
+            <!-- <md-autocomplete
               class="search"
               v-model="selectedEmployee"
               :md-options="employees"
             >
               <label>Search...</label>
-            </md-autocomplete>
+            </md-autocomplete> -->
           </div>
           <md-list>
-            <md-list-item href="#/">
+            <!-- <md-list-item href="#/">
               <i class="material-icons">dashboard</i>
               <p class="hidden-lg hidden-md">Dashboard</p>
-            </md-list-item>
+            </md-list-item> -->
 
             <!-- <md-list-item href="#/notifications" class="dropdown">
               <drop-down>
@@ -48,7 +48,7 @@
               </drop-down>
             </md-list-item> -->
 
-            <li class="md-list-item">
+            <!-- <li class="md-list-item">
               <a
                 href="#/notifications"
                 class="md-list-item-router md-list-item-container md-button-clean dropdown"
@@ -74,10 +74,10 @@
                   </drop-down>
                 </div>
               </a>
-            </li>
+            </li> -->
 
-            <md-list-item href="#/user">
-              <i class="material-icons">person</i>
+            <md-list-item>
+              <i class="material-icons">dashboard</i>
               <p class="hidden-lg hidden-md">Profile</p>
             </md-list-item>
           </md-list>
@@ -88,28 +88,26 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      selectedEmployee: null,
-      employees: [
-        "Jim Halpert",
-        "Dwight Schrute",
-        "Michael Scott",
-        "Pam Beesly",
-        "Angela Martin",
-        "Kelly Kapoor",
-        "Ryan Howard",
-        "Kevin Malone"
-      ]
-    };
-  },
-  methods: {
-    toggleSidebar() {
-      this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
-    }
-  }
-};
+  export default {
+    data() {
+      return {
+        selectedEmployee: null,
+        employees: [
+          "Jim Halpert",
+          "Dwight Schrute",
+          "Michael Scott",
+          "Pam Beesly",
+          "Angela Martin",
+          "Kelly Kapoor",
+          "Ryan Howard",
+          "Kevin Malone",
+        ],
+      };
+    },
+    methods: {
+      toggleSidebar() {
+        this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
+      },
+    },
+  };
 </script>
-
-<style lang="css"></style>
