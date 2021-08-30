@@ -17,6 +17,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import App from "./App";
+import store from "./store";
 
 // router setup
 import routes from "./routes/routes";
@@ -45,9 +46,10 @@ Vue.use(GlobalDirectives);
 
 /* eslint-disable no-new */
 new Vue({
+  router,
+  store,
   el: "#app",
   render: h => h(App),
-  router,
   data: {
     Chartist: Chartist
   }

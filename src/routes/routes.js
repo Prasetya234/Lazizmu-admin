@@ -5,8 +5,14 @@ import Testimoni from "@/pages/Testimoni";
 import Tiket from "@/pages/Tiket";
 import History from "@/pages/History";
 import NotFoundPage from "@/pages/NotFoundPage";
+import Login from "@/pages/Login";
 
 const routes = [
+  {
+    path: "/login",
+    name: Login,
+    component: Login,
+  },
   {
     path: "/",
     component: DashboardLayout,
@@ -15,33 +21,33 @@ const routes = [
       {
         path: "dashboard",
         name: "Dashboard",
-        component: Dashboard
+        component: Dashboard,
       },
       {
         path: "berita",
         name: "Data Berita",
-        component: CrudBerita
+        component: CrudBerita,
       },
       {
         path: "testimoni",
         name: "Testimoni",
-        component: Testimoni
+        component: Testimoni,
       },
       {
         path: "tiket",
         name: "Tiket",
-        component: Tiket
+        component: Tiket,
       },
       {
         path: "history",
         name: "History",
-        component: History
+        component: History,
       },
     ],
   },
-  
-
-  { path: "*", component: NotFoundPage }
+  { path: "*", component: NotFoundPage },
 ];
 
+
 export default routes;
+ 
