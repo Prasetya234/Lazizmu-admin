@@ -31,11 +31,29 @@ import MaterialDashboard from "./material-dashboard";
 
 import Chartist from "chartist";
 
+import firebase from "firebase";
+
+firebase.initializeApp({
+  apiKey: "AIzaSyAm_nHluT4RxuHTautfo7bN_8MMkgpGLWA",
+  authDomain: "uploadimagelazizmu.firebaseapp.com",
+  projectId: "uploadimagelazizmu",
+  storageBucket: "uploadimagelazizmu.appspot.com",
+  messagingSenderId: "875602778747",
+  appId: "1:875602778747:web:0fc2188293a389536a60de",
+  measurementId: "G-1KF06JTCL0",
+});
+
 // configure router
 const router = new VueRouter({
   routes, // short for routes: routes
-  linkExactActiveClass: "nav-item active"
+  linkExactActiveClass: "nav-item active",
 });
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 Vue.prototype.$Chartist = Chartist;
 
@@ -49,8 +67,8 @@ new Vue({
   router,
   store,
   el: "#app",
-  render: h => h(App),
+  render: (h) => h(App),
   data: {
-    Chartist: Chartist
-  }
+    Chartist: Chartist,
+  },
 });

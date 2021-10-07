@@ -38,60 +38,60 @@
   </div>
 </template>
 <script>
-  import SidebarLink from "./SidebarLink.vue";
+import SidebarLink from "./SidebarLink.vue";
 
-  export default {
-    components: {
-      SidebarLink,
+export default {
+  components: {
+    SidebarLink,
+  },
+  props: {
+    title: {
+      type: String,
+      default: "LAZIZMU MDS",
     },
-    props: {
-      title: {
-        type: String,
-        default: "LAZIZMU MDS",
-      },
-      sidebarBackgroundImage: {
-        type: String,
-        default: require("@/assets/img/sidebar-2.jpg"),
-      },
-      imgLogo: {
-        type: String,
-        default: require("@/assets/logo-kl-lazismu-smp-mds.jpg"),
-      },
-      sidebarItemColor: {
-        type: String,
-        default: "green",
-        validator: (value) => {
-          let acceptedValues = ["", "purple", "blue", "green", "orange", "red"];
-          return acceptedValues.indexOf(value) !== -1;
-        },
-      },
-      sidebarLinks: {
-        type: Array,
-        default: () => [],
-      },
-      autoClose: {
-        type: Boolean,
-        default: true,
+    sidebarBackgroundImage: {
+      type: String,
+      default: require("@/assets/img/sidebar-2.jpg"),
+    },
+    imgLogo: {
+      type: String,
+      default: require("@/assets/logo-kl-lazismu-smp-mds.jpg"),
+    },
+    sidebarItemColor: {
+      type: String,
+      default: "green",
+      validator: (value) => {
+        let acceptedValues = ["", "purple", "blue", "green", "orange", "red"];
+        return acceptedValues.indexOf(value) !== -1;
       },
     },
-    provide() {
+    sidebarLinks: {
+      type: Array,
+      default: () => [],
+    },
+    autoClose: {
+      type: Boolean,
+      default: true,
+    },
+  },
+  provide() {
+    return {
+      autoClose: this.autoClose,
+    };
+  },
+  computed: {
+    sidebarStyle() {
       return {
-        autoClose: this.autoClose,
+        backgroundImage: `url(${this.sidebarBackgroundImage})`,
       };
     },
-    computed: {
-      sidebarStyle() {
-        return {
-          backgroundImage: `url(${this.sidebarBackgroundImage})`,
-        };
-      },
-    },
-  };
+  },
+};
 </script>
 <style>
-  @media screen and (min-width: 991px) {
-    .nav-mobile-menu {
-      display: none;
-    }
+@media screen and (min-width: 991px) {
+  .nav-mobile-menu {
+    display: none;
   }
+}
 </style>
